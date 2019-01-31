@@ -1,0 +1,25 @@
+{
+  "name": "mommy-bot",
+  "version": "0.0.1",
+  "description": "Motherly Love",
+  "main": "bot.js",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "discord.io": "^2.5.3",
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [],
+  "author": "Collin Johnson",
+  "license": "UNLICENSED"
+}
