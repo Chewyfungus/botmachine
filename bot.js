@@ -3,6 +3,7 @@ var cluster = require('cluster');
 var express = require('express');
 var path = require('path');
 var file = require(path.join(__dirname, "src/js/util/file"));
+var botCommands = require(path.join(__dirname, "commands.js"));
 var credentials = require(path.join(__dirname, "src/js/config/credentials.json"));
 var port = process.env.PORT || 9001;
 var prefix = "~";
@@ -50,10 +51,9 @@ function receiveMessage(msg) {
   var targetChannel = (msg && msg.channel); // ||
 
   if (msg.content[0] === prefix) {
-    var command = msg.content.substr(1);
-    if (command === "tuckmein") {
-      targetChannel.send("Good night.")
-    }
+    //botCommands.botCommand(msg);
+    targetChannel.send(botCommands.botCommand(msg));
+
   }
 
 }
