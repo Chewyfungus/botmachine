@@ -1,4 +1,3 @@
-var Discord = require('discord.js');
 var cluster = require('cluster');
 var express = require('express');
 var path = require('path');
@@ -8,6 +7,7 @@ var credentials = require(path.join(__dirname, "src/js/config/credentials.json")
 var port = process.env.PORT || 9001;
 var prefix = "~";
 var http = require("http");
+var discordClient = require(path.join(__dirname, "src/js/clients/discordClient.js"))
 
 if (cluster.isMaster) {
   console.log("starting master OwO");
@@ -31,16 +31,7 @@ else {
   app.set("port", port);
   //app.get();
 
-  var discordClient = new Discord.Client();
-  console.log(credentials.token);
-  discordClient.login(credentials.token);
-  discordClient.on("ready", () => {
-  });
-
-  discordClient.on("message", (msg) => {
-    receiveMessage(msg);
-  });
-
+  var discordClient = new discordClient("gang gang", credentials);
 }
 
 function receiveMessage(msg) {
@@ -50,11 +41,11 @@ function receiveMessage(msg) {
   var to = msg.isMentioned(discordClient.user) ? botname: undefined;
   var targetChannel = (msg && msg.channel); // ||
 
-  if (msg.content[0] === prefix) {
-    //botCommands.botCommand(msg);
-    targetChannel.send(botCommands.botCommand(msg));
-
-  }
+  // if (msg.content[0] === prefix) {
+  //   //botCommands.botCommand(msg);
+  //   targetChannel.send(botCommands.botCommand(msg));
+  //
+  // }
 
 }
 

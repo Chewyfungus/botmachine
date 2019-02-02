@@ -1,0 +1,18 @@
+Da main loop:
+
+  In discordClient
+    message received:
+      build req object (contains information about the message, client it comes from etc)
+        send req to agentHub for interpretation
+
+  In agentHub
+    loop through each agent for that event type (in this case, receiving a message)
+      If a matching agent is found,
+        the matching agent will determine which action to run and which params to send to actionHub
+
+  In actionHub
+    run the action specified by the agent
+      calls the initial callback in the discord client
+
+----
+
