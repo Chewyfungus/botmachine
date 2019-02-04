@@ -10,11 +10,17 @@ module.exports = function() {
 
       if (req.message[0] === prefix) {
         var command = req.message.slice(1);
-        if (command === "goodnight") {
+        if (dialogue.hasProperty("command")) {
+          var parseCom = JSON.parse(dialogue);
+          function readProp(obj, prop) {
+            return obj[prop];
+          }
+
+          var test = readProp(parseCom, command);
           req.agent = {
             "action": "sendMessage",
             "params": {
-              "messages": dialogue.goodnight
+              "messages": test
             }
           };
           cb(true, req);
