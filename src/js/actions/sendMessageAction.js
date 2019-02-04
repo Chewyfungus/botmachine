@@ -5,7 +5,8 @@ module.exports = function() {
     var params = req.agent.params;
 
     if (params && params.messages) {
-      var rand = Math.floor((Math.random() * params.messages.length) + 1);
+      var rand = Math.floor((Math.random() * params.messages.length));
+      console.log("Random value: " + rand);
       action.sendMessage(params.messages[rand], req, cb);
     }
 

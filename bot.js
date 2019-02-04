@@ -10,8 +10,9 @@ var http = require("http");
 var discordClient = require(path.join(__dirname, "src/js/clients/discordClient.js"))
 
 if (cluster.isMaster) {
-  console.log("starting master OwO");
+  console.log("starting master UwU");
   cluster.fork();
+  console.log("master online OwO");
 
   cluster.on("exit", (worker) => {
     console.log("worker " + worker.id + " died");
