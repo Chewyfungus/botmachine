@@ -10,17 +10,11 @@ module.exports = function() {
 
       if (req.message[0] === prefix) {
         var command = req.message.slice(1);
-        if (dialogue.hasProperty("command")) {
-          var parseCom = JSON.parse(dialogue);
-          function readProp(obj, prop) {
-            return obj[prop];
-          }
-
-          var test = readProp(parseCom, command);
+        if (dialogue.hasOwnProperty(command)) {
           req.agent = {
             "action": "sendMessage",
             "params": {
-              "messages": test
+              "messages": (getProperty(dialogue, command))
             }
           };
           cb(true, req);
@@ -30,3 +24,7 @@ module.exports = function() {
     }
     return { interpret };
 }();
+
+function getProperty(obj, prop) {
+  return obj[prop];
+}
