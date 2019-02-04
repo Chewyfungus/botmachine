@@ -57,7 +57,6 @@ class DiscordClient {
       if (targetChannel && (targetChannel.type === "text" || targetChannel.type === "dm")) {
         var userText = res.from ? "@" + res.from + " " : "";
         targetChannel.send(message);
-        console.log("@@@@@@@@@@@@@@@@@@@@ yer dublin up girl");
       }
       else {
         console.log("invalid value for targetChannel.type or targetChannel does not exist");

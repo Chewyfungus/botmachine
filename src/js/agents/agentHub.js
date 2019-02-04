@@ -18,8 +18,6 @@ module.exports = function() {
   }
 
   function matchAgent(list, req, cb, i = 0) {
-    console.log("######  " + i + "  @@@@@@@@@");
-    console.log("list length: " + list.length);
     console.log(list[i]);
     if (i < list.length) {
       list[i].interpret(req, (match, res, err) => {

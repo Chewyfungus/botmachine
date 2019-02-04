@@ -1,3 +1,6 @@
+var path = require('path');
+var dialogue = require(path.join(__dirname, "../config/dialogue.json"));
+
 module.exports = function() {
     function interpret(req, cb) {
 
@@ -11,11 +14,7 @@ module.exports = function() {
           req.agent = {
             "action": "sendMessage",
             "params": {
-              "messages": [
-                "Good night, sweetie! :kissing_closed_eyes:",
-                "Sweet dreams, don't let the bed bugs bite!",
-                "Gnite :heart:"
-              ]
+              "messages": dialogue.goodnight
             }
           };
           cb(true, req);

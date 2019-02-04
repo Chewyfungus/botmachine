@@ -2,7 +2,6 @@ var cluster = require('cluster');
 var express = require('express');
 var path = require('path');
 var file = require(path.join(__dirname, "src/js/util/file"));
-var botCommands = require(path.join(__dirname, "commands.js"));
 var credentials = require(path.join(__dirname, "src/js/config/credentials.json"));
 var port = process.env.PORT || 9001;
 var prefix = "~";
