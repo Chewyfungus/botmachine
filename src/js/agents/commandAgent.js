@@ -19,6 +19,17 @@ module.exports = function() {
           };
           cb(true, req);
         }
+
+        else {
+          console.log("Invalid command '" + command + "' issued.");
+          req.agent = {
+            "action": "sendMessage",
+            "params": {
+              "messages": dialogue.invalid
+            }
+          };
+            cb(true, req);
+        }
         cb(false);
       }
     }

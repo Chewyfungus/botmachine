@@ -11,8 +11,8 @@ module.exports = function() {
     }
 
     else {
-      action.sendMessage("Oh, goodness, I don't know how to do *that*...", req, cb)
-      console.log("Invalid command issued");
+      // action.sendMessage("Oh, goodness, I don't know if I can do *that*...", req, cb)
+      // console.log("Invalid command issued");
     }
   }
 
