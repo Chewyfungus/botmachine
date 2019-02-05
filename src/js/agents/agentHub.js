@@ -26,7 +26,6 @@ module.exports = function() {
           matchAgent(list, req, cb, ++i);
         }
         else if (match) {
-          console.log("else if meme");
           cb(res);
         }
         else {

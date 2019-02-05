@@ -1,5 +1,6 @@
 var path = require('path');
-var keys = require(path.join(__dirname, "../config/api_keys.json"));
+var file = require(path.join(__dirname, "../util/file.js"))
+var keys = file.read(path.join(__dirname, "../config/api_keys.json"));
 
 module.exports = function() {
   function run() {
@@ -11,3 +12,10 @@ module.exports = function() {
   }
   return { run };
 }
+
+// function getPicture(text, req, cb) {
+//   req.action = {
+//     "text": text
+//   }
+//   cb(null, req);
+// }
