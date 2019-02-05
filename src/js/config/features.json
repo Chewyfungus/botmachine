@@ -1,0 +1,31 @@
+{
+	"goodnight": {
+		"action": "sendMessage",
+		"commands": [{
+			"command": "goodnight",
+			"constants": [{ "name": "messages", "value": [
+				"Good night, sweetie! :kissing_closed_eyes:",
+				"Sweet dreams, don't let the bed bugs bite!",
+				"gnite :heart:"
+			] }]
+		}, {
+			"command": "gnite",
+			"constants": [{ "name": "messages", "value": [
+				"Good night, sweetie! :kissing_closed_eyes:",
+				"Sweet dreams, don't let the bed bugs bite!",
+				"gnite :heart:"
+			] }]
+		}]
+	},
+
+	"getpicture": {
+		"action": "getPicture",
+		"commands": [{
+			"command": "getpicture",
+			"constants": [{ "name": "messages", "value": [
+				"Is this what you were looking for...?",
+				"I hope this is good enough"
+			] }]
+		}]
+	}
+}

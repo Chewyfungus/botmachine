@@ -1,8 +1,10 @@
 var path = require("path");
-var sendMessageAction = require(path.join(__dirname, "sendMessageAction"));
+var sendMessageAction = require(path.join(__dirname, "sendMessageAction.js"));
+var getPictureAction = require(path.join(__dirname, "getPictureAction.js"))
 module.exports = function() {
   var actionMap = {
-    "sendMessage": sendMessageAction
+    "sendMessage": sendMessageAction,
+    "getPicture": getPictureAction
   }
 
   function run(req, cb) {
@@ -19,6 +21,7 @@ module.exports = function() {
       console.log("Agent has not been specified");
     }
     try {
+      console.log(req.agent.action + " @@@@@ ")
       action.run(req, cb);
     }
     catch(err) {

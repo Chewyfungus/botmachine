@@ -1,0 +1,13 @@
+{
+    "groups": {
+        "gang gang": {
+            "clients": {},
+            "agents": {
+                "command": {
+                    "prefix": "~"
+                }
+            },
+            "actions": {}
+        }
+    }
+}
