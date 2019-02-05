@@ -7,7 +7,8 @@ module.exports = function() {
     if (params && params.messages) {
       var rand = Math.floor((Math.random() * params.messages.length));
       console.log("Random value: " + rand);
-      action.sendMessage(params.messages[rand], req, cb);
+      console.log(params.messages[rand] + ", " + req + ", " + cb + ", ")
+      action.chooseAction(params.messages[rand], req, cb, params, "sendMessage");
     }
 
     else {
