@@ -48,6 +48,20 @@
 				"Oh stop it, you're embarrassing me...",
 				"Do you really like them that much...? "
 			] }]
+		}, {
+			"command": "MILKIES",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}, {
+			"command": "MILKERS",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
 		}]
 	},
 	
