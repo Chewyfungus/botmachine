@@ -1,3 +1,11 @@
+// Once an event has been triggered and the req object 
+//   has been passed to agentHub.interpret,
+//   it loops through through each agent for that event.
+//   This is done through the matchAgent function, which recursively
+//   iterates through and attempts to match an agent (a replyAgent in this case).
+// If a replyAgent that matches is found, req is transformed and passed to actionHub.run,
+//   
+
 var path = require("path");
 var actionHub = require(path.join(__dirname, "../actions/actionHub"));
 var commandAgent = require(path.join(__dirname, "../agents/commandAgent"));
@@ -33,10 +41,6 @@ module.exports = function() {
         }
       });
     }
-    // else {
-    //   cb(req);
-    //   console.log("raw else wtf");
-    // }
   }
   return { interpret };
 }();

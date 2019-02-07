@@ -8,6 +8,7 @@ var prefix = "~";
 var http = require("http");
 var discordClient = require(path.join(__dirname, "src/js/clients/discordClient.js"))
 
+//Starts new workers
 if (cluster.isMaster) {
   console.log("starting master UwU");
   cluster.fork();
@@ -19,6 +20,7 @@ if (cluster.isMaster) {
   })
 }
 
+//everything else
 else {
   //make da server
   var app = express();
@@ -34,6 +36,7 @@ else {
   var discordClient = new discordClient("gang gang", credentials);
 }
 
+//
 function receiveMessage(msg) {
   if (msg.author.bot) return;
   var botname = discordClient.user.username + "#" + discordClient.user.discriminator;

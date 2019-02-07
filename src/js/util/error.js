@@ -7,7 +7,8 @@ module.exports = function() {
     ]
     
     function randomError() {
-        return errors[math.randomInt(0, errors.length - 1)];
+        // return errors[math.randomInt(0, errors.length - 1)];
+        return errors;
     }
 
     return { randomError };

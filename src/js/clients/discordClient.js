@@ -1,3 +1,11 @@
+// Things start here for a discord message. 
+// The bot (via bot.js) interfaces with the service via the client.
+// In this case, the client interacts with the user by listening for messages
+// Once a message is received and conditions are met,
+//   that message and information about it are stored in a req (request) object
+// The req object is then passed to an agenthub object via agentHub.interpret -
+//   along with the req object, ...
+
 var Discord = require('discord.js');
 var path = require("path")
 var agentHub = require(path.join(__dirname, "../agents/agentHub.js"))
@@ -9,6 +17,7 @@ class DiscordClient {
     this.discordClient.on("ready", () => {
     });
 
+    // Listening for messages
     this.discordClient.on("message", (msg) => {
       this.receiveMessage(msg);
     });

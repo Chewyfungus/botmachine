@@ -1,3 +1,5 @@
+// Once req arrives via actionHub.run, it is then passed to the appropriate action
+
 var path = require("path");
 var sendMessageAction = require(path.join(__dirname, "sendMessageAction.js"));
 var getPictureAction = require(path.join(__dirname, "getPictureAction.js"))
@@ -21,7 +23,6 @@ module.exports = function() {
       console.log("Agent has not been specified");
     }
     try {
-      console.log(req.agent.action + " @@@@@ ")
       action.run(req, cb);
     }
     catch(err) {
