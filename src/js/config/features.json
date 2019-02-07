@@ -18,6 +18,54 @@
 		}]
 	},
 
+	"milkies": {
+		"action": "sendMessage",
+		"commands": [{
+			"command": "milkies",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}, {
+			"command": "milkers",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}, {
+			"command": "mommymilkies",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}, {
+			"command": "mommymilkers",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}, {
+			"command": "MILKIES",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}, {
+			"command": "MILKERS",
+			"constants": [{ "name": "messages", "value": [
+				"What?! :flushed: Don't say things like that!",
+				"Oh stop it, you're embarrassing me...",
+				"Do you really like them that much...? "
+			] }]
+		}]
+	},
+	
+
 	"getpicture": {
 		"action": "getPicture",
 		"commands": [{
