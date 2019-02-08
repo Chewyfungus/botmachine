@@ -16,15 +16,15 @@ module.exports = function() {
 
         for (var i in commands) {
             console.log(commands[i].command);
-            if (req.message  === commands[i].command) {
+            if (messageArray[0]  === commands[i].command) {
                 var params = getParams(commands[i]);
                 req.agent = {
                     "action": commands[i].action,
                     "params": params
                 };
-                console.log(params);
-                cb(true, req); 
-                return;
+            console.log(params);
+            cb(true, req); 
+            return;
             }
           
         }

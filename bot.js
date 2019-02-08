@@ -4,7 +4,6 @@ var path = require('path');
 var file = require(path.join(__dirname, "src/js/util/file"));
 var credentials = file.read(path.join(__dirname, "src/js/config/credentials.json"));
 var port = process.env.PORT || 9001;
-var prefix = "~";
 var http = require("http");
 var discordClient = require(path.join(__dirname, "src/js/clients/discordClient.js"))
 

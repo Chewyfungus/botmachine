@@ -1,7 +1,6 @@
 var path = require('path');
 var file = require(path.join(__dirname, "file.js"));
 var features = file.read(path.join(__dirname, "../config/idleFeatures.json"));
-var error = require(path.join(__dirname, "error.js"));
 
 module.exports = function() {
     function getCommands() {
