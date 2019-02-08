@@ -9,9 +9,12 @@
 var path = require("path");
 var actionHub = require(path.join(__dirname, "../actions/actionHub"));
 var commandAgent = require(path.join(__dirname, "../agents/commandAgent"));
+var idleAgent = require(path.join(__dirname, "../agents/idleAgent"));
+
 module.exports = function() {
   var replyAgents = [
-    commandAgent
+    commandAgent,
+    idleAgent
   ];
   function interpret(req, cb) {
     try {

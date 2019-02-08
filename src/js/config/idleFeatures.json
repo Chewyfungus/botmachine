@@ -1,0 +1,26 @@
+{
+	"mommy": {
+		"action": "sendMessage",
+		"commands": [{
+			"command": "mommy",
+			"constants": [{ "name": "messages", "value": [
+				"Placeholder value :heart:"
+			] }]
+		}, {
+			"command": "Mommy",
+			"constants": [{ "name": "messages", "value": [
+				"Placeholder value :heart:"
+			] }]
+		}]
+	},
+
+	"tendies": {
+		"action": "sendMessage",
+		"commands": [{
+			"command": "tendies",
+			"constants": [{ "name": "messages", "value": [
+				"Placeholder value :heart:"
+			] }]
+		}]
+	}
+}

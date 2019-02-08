@@ -4,7 +4,9 @@
             "clients": {},
             "agents": {
                 "command": {
-                    "prefix": "~"
+                    "prefix": "~",
+                    "idleActivityHigh": "5",
+                    "idleActivityLow": "50" 
                 }
             },
             "actions": {}
